@@ -62,7 +62,7 @@ app.post("/api/finalizar/:id", (req, res) => {
 
 app.get("/track/:id", (req, res) => {
   const id = req.params.id;
-  const apiKey = "AIzaSyDbBjL2PgNhdS7Jc_aje_srjsc7fALUfnA"; // Sustituye por tu Google Maps API key
+  const apiKey = "AIzaSyDV_pdPFxyNeG6Hi3G5K1kBSwOL7wjK6ho"; // Sustituye por tu Google Maps API key
 
 res.send(`<!DOCTYPE html>
 <html>

@@ -62,7 +62,7 @@ app.post("/api/finalizar/:id", (req, res) => {
 
 app.get("/track/:id", (req, res) => {
   const id = req.params.id;
-  const apiKey = "AIzaSyC1fn5U9xyDTW3NFfcABAuwazeO39qyo2E"; // Sustituye por tu Google Maps API key
+  const apiKey = "AIzaSyDbBjL2PgNhdS7Jc_aje_srjsc7fALUfnA"; // Sustituye por tu Google Maps API key
 
 res.send(`<!DOCTYPE html>
 <html>
@@ -167,7 +167,7 @@ res.send(`<!DOCTYPE html>
 <body>
   <div id="mensajes-superiores">
     <div class="mensaje visible">🕒 Calculando tiempo estimado de llegada...</div>
-<div class="mensaje">🍔 Tu pedido de Don Burgo ya viene en camino… ¡recién preparado :D!</div>
+<div class="mensaje">🍔 Tu pedido de Don Burgo ya viene en camino… ¡recién preparado!</div>
 <div class="mensaje">🚴‍♂️ El sabor de Don Burgo llega con todo el esfuerzo detrás.</div>
 <div class="mensaje">🌟 En Don Burgo cuidamos cada detalle, incluso el camino a tu puerta.</div>
 <div class="mensaje">🧳 Llevar Don Burgo hasta ti es parte del buen servicio que nos define.</div>

@@ -62,9 +62,9 @@ app.post("/api/finalizar/:id", (req, res) => {
 
 app.get("/track/:id", (req, res) => {
   const id = req.params.id;
-  const apiKey = "AIzaSyDbBjL2PgNhdS7Jc_aje_srjsc7fALUfnA"; // Sustituye por tu Google Maps API key
+  const apiKey = "AIzaSyDbBjL2PgNhdS7Jc_aje_srjsc7fALUfnA"; // tu API key
 
-res.send(`<!DOCTYPE html>
+  res.send(`<!DOCTYPE html>
 <html>
 <head>
   <title>Seguimiento en tiempo real</title>
@@ -77,27 +77,26 @@ res.send(`<!DOCTYPE html>
       font-family: 'Roboto', sans-serif;
       display: flex;
       flex-direction: column;
-      background-color: #fffdf8;
+      background-color: #FFF7E6; /* antes: #fffdf8 */
     }
 
-#mensajes-superiores {
-  background-color: #ff6600;
-  color: white;
-  font-weight: 500;
-  font-size: 16px;
-  text-align: center;
-  padding: 14px 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 600px;
-  border-radius: 20px;
-  z-index: 9999;
-}
-
+    #mensajes-superiores {
+      background-color: #FF8A00; /* antes: #ff6600 (naranja principal) */
+      color: #FFFFFF;
+      font-weight: 500;
+      font-size: 16px;
+      text-align: center;
+      padding: 14px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 600px;
+      border-radius: 20px;
+      z-index: 9999;
+    }
 
     .mensaje {
       display: none;
@@ -115,23 +114,22 @@ res.send(`<!DOCTYPE html>
       100% { opacity: 0; }
     }
 
- #tiempo-llegada {
-  font-size: 15px;
-  font-weight: 500;
-  color: #333;
-  background-color: #fff2e0;
-  padding: 12px 20px;
-  margin-top: 90px; /* empuja el texto hacia abajo del banner */
-  margin-bottom: 10px;
-  width: 90%;
-  max-width: 600px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  align-self: center;
-  z-index: 10;
-}
-
+    #tiempo-llegada {
+      font-size: 15px;
+      font-weight: 500;
+      color: #5B3A1A;           /* antes: #333 (marrón oscuro suave) */
+      background-color: #FFE8C2;/* antes: #fff2e0 (crema cálido) */
+      padding: 12px 20px;
+      margin-top: 90px;
+      margin-bottom: 10px;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      align-self: center;
+      z-index: 10;
+    }
 
     #expirado {
       display: none;
@@ -139,6 +137,7 @@ res.send(`<!DOCTYPE html>
       font-size: 18px;
       font-weight: bold;
       text-align: center;
+      color: #5B3A1A; /* combina con la paleta */
     }
 
     #map {
@@ -151,12 +150,12 @@ res.send(`<!DOCTYPE html>
       position: absolute;
       width: 100%;
       height: 100%;
-      background: #fff;
+      background: #FFF7E6; /* antes: #fff */
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 18px;
-      color: #666;
+      color: #A35D00; /* antes: #666 */
       z-index: 20;
     }
   </style>
@@ -167,24 +166,21 @@ res.send(`<!DOCTYPE html>
 <body>
   <div id="mensajes-superiores">
     <div class="mensaje visible">🕒 Calculando tiempo estimado de llegada...</div>
-<div class="mensaje">🌯🥞 Tu pedido de RIKARDAS ya va en camino… ¡crepas y burritos recién preparados!</div>
-<div class="mensaje">🚴‍♂️ El sabor de RIKARDAS llega con todo el esfuerzo detrás.</div>
-<div class="mensaje">🌟 En RIKARDAS cuidamos cada detalle, incluso el camino a tu puerta.</div>
-<div class="mensaje">🧳 Llevar RIKARDAS hasta ti es parte del buen servicio que nos define.</div>
-<div class="mensaje">💼 Lo mejor de RIKARDAS no solo está en las crepas y burritos, también en cómo llegan.</div>
-<div class="mensaje">✨ Una entrega cálida, así como el sabor de RIKARDAS.</div>
-<div class="mensaje">🧡 Gracias por confiar en RIKARDAS.</div>
-<div class="mensaje">📦 Detrás de tu pedido hay dedicación. Así se vive la experiencia RIKARDAS.</div>
-<div class="mensaje">🌯 Si disfrutaste tu pedido de RIKARDAS, ¡nos alegra saberlo con una propina para el repartidor!</div>
-<div class="mensaje">😊 Un buen servicio merece ser recordado… o reconocido con una propina.</div>
-<div class="mensaje">🙌 Cuando un cliente agradece, nuestros repartidores lo notan.</div>
-<div class="mensaje">🧡 Si sentiste que fue un buen servicio, puedes expresarlo con una propina.</div>
-<div class="mensaje">📦 Cada entrega lleva esfuerzo. Si lo valoras, ellos quedan agradecidos con tu propina.</div>
-<div class="mensaje">✨ Tu reconocimiento motiva a seguir entregando con el corazón.</div>
-<div class="mensaje">🚴‍♂️ Satisfacción completa: crepas y burritos deliciosos, buena atención y buenos detalles.</div>
-
-
-
+    <div class="mensaje">🌯🥞 Tu pedido de RIKARDAS ya va en camino… ¡crepas y burritos recién preparados!</div>
+    <div class="mensaje">🚴‍♂️ El sabor de RIKARDAS llega con todo el esfuerzo detrás.</div>
+    <div class="mensaje">🌟 En RIKARDAS cuidamos cada detalle, incluso el camino a tu puerta.</div>
+    <div class="mensaje">🧳 Llevar RIKARDAS hasta ti es parte del buen servicio que nos define.</div>
+    <div class="mensaje">💼 Lo mejor de RIKARDAS no solo está en las crepas y burritos, también en cómo llegan.</div>
+    <div class="mensaje">✨ Una entrega cálida, así como el sabor de RIKARDAS.</div>
+    <div class="mensaje">🧡 Gracias por confiar en RIKARDAS.</div>
+    <div class="mensaje">📦 Detrás de tu pedido hay dedicación. Así se vive la experiencia RIKARDAS.</div>
+    <div class="mensaje">🌯 Si disfrutaste tu pedido de RIKARDAS, ¡nos alegra saberlo con una propina para el repartidor!</div>
+    <div class="mensaje">😊 Un buen servicio merece ser recordado… o reconocido con una propina.</div>
+    <div class="mensaje">🙌 Cuando un cliente agradece, nuestros repartidores lo notan.</div>
+    <div class="mensaje">🧡 Si sentiste que fue un buen servicio, puedes expresarlo con una propina.</div>
+    <div class="mensaje">📦 Cada entrega lleva esfuerzo. Si lo valoras, ellos quedan agradecidos con tu propina.</div>
+    <div class="mensaje">✨ Tu reconocimiento motiva a seguir entregando con el corazón.</div>
+    <div class="mensaje">🚴‍♂️ Satisfacción completa: crepas y burritos deliciosos, buena atención y buenos detalles.</div>
   </div>
 
   <div id="tiempo-llegada">Calculando tiempo estimado de llegada...</div>
@@ -214,7 +210,7 @@ res.send(`<!DOCTYPE html>
       directionsRenderer = new google.maps.DirectionsRenderer({
         suppressMarkers: true,
         polylineOptions: {
-          strokeColor: '#ff6600',
+          strokeColor: '#FF8A00', /* antes: #ff6600 */
           strokeWeight: 4,
           opacity: 0.9
         }
@@ -380,10 +376,9 @@ res.send(`<!DOCTYPE html>
   </script>
 </body>
 </html>`);
-
 });
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
   console.log("Servidor en puerto", PORT);
-});  
+});

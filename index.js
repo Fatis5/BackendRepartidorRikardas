@@ -167,21 +167,22 @@ res.send(`<!DOCTYPE html>
 <body>
   <div id="mensajes-superiores">
     <div class="mensaje visible">🕒 Calculando tiempo estimado de llegada...</div>
-<div class="mensaje">🍔 Tu pedido de Don Burgo ya viene en camino… ¡recién preparado!</div>
-<div class="mensaje">🚴‍♂️ El sabor de Don Burgo llega con todo el esfuerzo detrás.</div>
-<div class="mensaje">🌟 En Don Burgo cuidamos cada detalle, incluso el camino a tu puerta.</div>
-<div class="mensaje">🧳 Llevar Don Burgo hasta ti es parte del buen servicio que nos define.</div>
-<div class="mensaje">💼 Lo mejor de Don Burgo no solo está en la comida, también en cómo llega.</div>
-<div class="mensaje">✨ Una entrega cálida, así como el sabor de Don Burgo.</div>
-<div class="mensaje">🧡 Gracias por confiar en Don Burgo.</div>
-<div class="mensaje">📦 Detrás de tu pedido hay dedicación. Así se vive la experiencia Don Burgo.</div>
-<div class="mensaje">🍔 Si disfrutaste tu pedido de Don Burgo, ¡nos alegra saberlo con una propina para el repartidor!</div>
+<div class="mensaje">🌯🥞 Tu pedido de RIKARDAS ya va en camino… ¡crepas y burritos recién preparados!</div>
+<div class="mensaje">🚴‍♂️ El sabor de RIKARDAS llega con todo el esfuerzo detrás.</div>
+<div class="mensaje">🌟 En RIKARDAS cuidamos cada detalle, incluso el camino a tu puerta.</div>
+<div class="mensaje">🧳 Llevar RIKARDAS hasta ti es parte del buen servicio que nos define.</div>
+<div class="mensaje">💼 Lo mejor de RIKARDAS no solo está en las crepas y burritos, también en cómo llegan.</div>
+<div class="mensaje">✨ Una entrega cálida, así como el sabor de RIKARDAS.</div>
+<div class="mensaje">🧡 Gracias por confiar en RIKARDAS.</div>
+<div class="mensaje">📦 Detrás de tu pedido hay dedicación. Así se vive la experiencia RIKARDAS.</div>
+<div class="mensaje">🌯 Si disfrutaste tu pedido de RIKARDAS, ¡nos alegra saberlo con una propina para el repartidor!</div>
 <div class="mensaje">😊 Un buen servicio merece ser recordado… o reconocido con una propina.</div>
 <div class="mensaje">🙌 Cuando un cliente agradece, nuestros repartidores lo notan.</div>
 <div class="mensaje">🧡 Si sentiste que fue un buen servicio, puedes expresarlo con una propina.</div>
 <div class="mensaje">📦 Cada entrega lleva esfuerzo. Si lo valoras, ellos quedan agradecidos con tu propina.</div>
 <div class="mensaje">✨ Tu reconocimiento motiva a seguir entregando con el corazón.</div>
-<div class="mensaje">🚴‍♂️ Satisfacción completa: buena comida, buena atención y buenos detalles.</div>
+<div class="mensaje">🚴‍♂️ Satisfacción completa: crepas y burritos deliciosos, buena atención y buenos detalles.</div>
+
 
 
   </div>
@@ -225,7 +226,7 @@ res.send(`<!DOCTYPE html>
         map,
         title: 'Tu pedido',
         icon: {
-          url: 'https://i.postimg.cc/h4HDzn3X/Chat-GPT-Image-1-jun-2025-02-34-48-a-m-2.png',
+          url: 'https://i.postimg.cc/5y2jmytK/Whats-App-Image-2025-09-07-at-13-37-28.jpg',
           scaledSize: new google.maps.Size(50, 50)
         }
       });

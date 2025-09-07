@@ -226,7 +226,7 @@ res.send(`<!DOCTYPE html>
         map,
         title: 'Tu pedido',
         icon: {
-          url: 'https://i.postimg.cc/5y2jmytK/Whats-App-Image-2025-09-07-at-13-37-28.jpg',
+          url: 'https://i.postimg.cc/FFYY1f21/015ae17a-261c-4490-95ff-b4ae63fb8a16.png',
           scaledSize: new google.maps.Size(50, 50)
         }
       });
